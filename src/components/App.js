@@ -1,19 +1,33 @@
+import React, { useState } from 'react';
 import video from "../data/video.js";
+import Videoplayer from './Videoplayer'
+import VidDeetz from "./VidDeetz"
+
+
+/*----------------------------------------------------------------
+App
+  |-Video
+  |-VidDeetz
+    |-video info (map)
+    |-up/down vt buttons (increment)
+    |-show/hide comment buttons (filter)
+      |-comment section (map)
+
+
+
+/*----------------------------------------------------------------*/
+
 
 function App() {
+
   console.log("Here's your data:", video);
 
   return (
-    <div className="App">
-      <iframe
-        width="919"
-        height="525"
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-        frameBorder="0"
-        allowFullScreen
-        title="Thinking in React"
-      />
+    <div>
+      <Videoplayer src={video.embedUrl} title={video.title} />
+      <VidDeetz />
     </div>
+
   );
 }
 
