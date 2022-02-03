@@ -23,7 +23,7 @@ function App() {
   console.log("Here's your data:", video);
 
   return (
-    <div>
+    <div class="App">
       <Videoplayer src={video.embedUrl} title={video.title} />
       <VidDeetz />
     </div>
