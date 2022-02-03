@@ -5,13 +5,12 @@ import IndividualComment from './IndividualComment';
 
 
 function CommentList() {
-  console.log(`this is the video object in comment list: ${video}`)
   return (
-    <ul>
+    <p>
     {video.comments.map((comment) => {
         return <IndividualComment key={comment.id} user={comment.user} comment={comment.comment}/>
       })}
-  </ul>
+  </p>
   )
 }
 
